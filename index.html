@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A read on Coral Gables' Smart City stack | Prepared for the Innovation and Technology Department</title>
+<meta name="description" content="Smart21 three years running, and the FY24-25 accomplishments doc shows the INFOR cutover wrapped up across finance, HR, supply chain, payroll. The place that usually hurts next is the data contracts between the ERP, ArcGIS, and AIDA." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="masthead" role="banner">
+  <div class="masthead-inner">
+    <div class="masthead-logo">
+      <img src="logo.png" alt="City of Coral Gables" />
+    </div>
+    <div class="masthead-meta">
+      <strong>The City Beautiful</strong><br />
+      Est. 1925
+    </div>
+  </div>
+</header>
+
+<div class="strap">
+  <div class="strap-inner">
+    <span>Prepared for</span>
+    <span>Innovation and Technology Department &middot; eMerge Americas 2026</span>
+  </div>
+</div>
+
+<main>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-kicker">A Read, Not a Pitch</div>
+    <h1 id="page-title">Where the next layer of Coral Gables' Smart City program gets harder.</h1>
+    <p class="hero-lede">
+      Smart21 three years running, and the FY24-25 accomplishments doc shows the INFOR cutover wrapped up across Finance, HR, Supply Chain, and Payroll. The place that usually hurts next is the data contracts between the ERP, ArcGIS, and AIDA.
+    </p>
+  </section>
+
+  <section class="credentials" aria-label="City milestones on record">
+    <div class="credentials-grid">
+      <div class="credential">
+        <div class="credential-label">Recognition</div>
+        <div class="credential-value">ICF Smart21, three consecutive years</div>
+      </div>
+      <div class="credential">
+        <div class="credential-label">Stack cutover</div>
+        <div class="credential-value">INFOR CloudSuite, FY24-25 closed</div>
+      </div>
+      <div class="credential">
+        <div class="credential-label">Deployed</div>
+        <div class="credential-value">Ekin Spotter poles, pilot to 10+</div>
+      </div>
+    </div>
+  </section>
+
+  <article class="body" aria-labelledby="body-heading">
+    <div class="section-label">The Read</div>
+    <h2 id="body-heading">After the ERP year, the integration work does not end. It shifts.</h2>
+
+    <p>
+      The City Beautiful centennial closed the way most of the city's IT year closed: with a stack of finished work. The INFOR CloudSuite cutover wrapped across Finance, HR, Supply Chain, Payroll, and Questica. The Smart City Hub added a year of open data and another Smart21 certification. The Ekin Spotter smart poles expanded from pilot to a ten-pole deployment. AIDA moved to a generative model. The Innovation and Technology Department shipped.
+    </p>
+
+    <p>
+      The next phase is harder than the last. The data contracts between INFOR, the ArcGIS Hub, the AWS-hosted Urban Analytics layer, and the Azure-hosted AIDA chatbot are where smart city programs quietly accumulate debt. A planner who wants a clean view of pedestrian counts, permit activity, and service requests against a street corridor ends up with three dashboards and a spreadsheet. A resident who asks AIDA about a zoning question gets a general answer because the chatbot does not read the permitting system. Over time, the glue code multiplies. Nobody owns it.
+    </p>
+
+    <div class="pull">
+      We read this as an orchestration problem, not a platform problem. Most municipal workflows break into three layers. Map the layers first and the governance story stays clean.
+    </div>
+
+    <p>
+      Teams that treat all three layers as one AI problem burn budget. Teams that map the layers first ship faster, and the governance story keeps pace with the build.
+    </p>
+  </article>
+
+  <section class="frame" aria-labelledby="frame-heading">
+    <div class="frame-inner">
+      <div class="frame-head">
+        <div class="section-label">A Useful Frame</div>
+        <h3 id="frame-heading">Three layers inside most municipal workflows</h3>
+      </div>
+      <div class="frame-rows">
+        <div class="frame-row">
+          <div class="frame-cell frame-pct">60%</div>
+          <div class="frame-cell frame-desc">
+            <strong>Traditional code and database work</strong>
+            <span>Integration a competent engineering team can scope. ERP to GIS, GIS to citizen app, records to archive.</span>
+          </div>
+        </div>
+        <div class="frame-row">
+          <div class="frame-cell frame-pct">30%</div>
+          <div class="frame-cell frame-desc">
+            <strong>Rule-based logic</strong>
+            <span>Permit routing, compliance checks, escalation paths. Decisions that want structured rules, not a language model.</span>
+          </div>
+        </div>
+        <div class="frame-row">
+          <div class="frame-cell frame-pct">10%</div>
+          <div class="frame-cell frame-desc">
+            <strong>Generative AI, genuinely</strong>
+            <span>Summarizing long documents. Answering open citizen questions against a trusted knowledge base. Draft responses under human review.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <article class="body" aria-labelledby="body-heading-2">
+    <div class="section-label">Where the Methodology Comes From</div>
+    <h2 id="body-heading-2">The folder structure told the agent what to look for.</h2>
+
+    <p>
+      Eduba's work with a government-adjacent compliance platform, VigilOre, collapsed 160+ hours of manual compliance review to under five minutes. The win was not the model. It was the folder structure that told the agent what to look for, what to ignore, and what to flag for human sign-off.
+    </p>
+
+    <p>
+      That architecture is published as the Interpretable Context Methodology, submitted to ACM TiiS, and it is the thing we would bring to a read on Coral Gables' stack. Peer-reviewed work tends to travel better across municipal procurement than vendor slides. Relevant links below.
+    </p>
+
+    <p>
+      A tangent worth mentioning. Eduba partners with NLP Logix for work that sits below the orchestration layer. NLP Logix has been in machine learning since 2011 and runs over 150 data scientists. If any piece of the engagement needs heavy data pipeline or production ML engineering, that work has a home.
+    </p>
+  </article>
+
+  <section class="evidence" aria-labelledby="evidence-heading">
+    <div class="evidence-head">
+      <div class="section-label">On Record</div>
+      <h2 id="evidence-heading">Published work and prior engagements</h2>
+    </div>
+    <div class="evidence-list">
+      <div class="evidence-item">
+        <h3>Interpretable Context Methodology</h3>
+        <p>Folder structure as agent architecture. Submitted to ACM TiiS. MIT license. The architectural frame we would bring to a read on the post-ERP integration layer.</p>
+        <p>
+          <a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">github.com/RinDig/Interpretable-Context-Methodology-ICM-</a>
+        </p>
+      </div>
+      <div class="evidence-item">
+        <h3>Ethics Engine</h3>
+        <p>A psychometric assessment tool for evaluating ideological and moral patterns in LLMs. Relevant when a municipality is drafting an AI acceptable-use policy.</p>
+        <p>
+          <a href="https://arxiv.org/abs/2510.11742" target="_blank" rel="noopener">arxiv.org/abs/2510.11742</a>
+          &nbsp;&middot;&nbsp;
+          <a href="https://github.com/RinDig/AuditEngine" target="_blank" rel="noopener">github.com/RinDig/AuditEngine</a>
+        </p>
+      </div>
+      <div class="evidence-item">
+        <h3>Correlation One, workforce programs</h3>
+        <p>1,500+ people trained at Pacific Life and Colgate-Palmolive since May 2025. 6,000 to 9,000 hours saved per year. 95% still using the tools 30 days after the workshop. Reads across to the Gables TechTank side of the house.</p>
+      </div>
+      <div class="evidence-item">
+        <h3>KPMG UK (Big Four)</h3>
+        <p>Executive AI program for regulated-industry leadership. 40+ executives. A reference when the audience is senior staff writing the governance posture.</p>
+      </div>
+    </div>
+  </section>
+
+  <article class="body" aria-labelledby="founder-heading">
+    <div class="section-label">Who Is Bringing This</div>
+    <h2 id="founder-heading">Measured register. Methodology first.</h2>
+    <p>
+      Jake Van Clief, Eduba's CEO, served eight years in the Marine Corps on cryptographic systems and F-35/F-18 avionics before taking a master's in Future Governance at the University of Edinburgh. Matt Creamer, Eduba's CRO, leads conversations like this one.
+    </p>
+    <p>
+      Eduba operates through Van Clief Media LLC. SAM-registered. UEI Y77RULHKK9Q1. Primary NAICS 541611. Work is scoped around orchestration design, AI governance, and training transfer. No tools to sell.
+    </p>
+  </article>
+
+</main>
+
+<section class="cta" aria-labelledby="cta-heading">
+  <div class="cta-inner">
+    <div class="cta-copy">
+      <div class="section-label">The Ask</div>
+      <h2 id="cta-heading">Thirty minutes. One workflow that has accumulated integration debt since the cutover closed.</h2>
+      <p>
+        We will walk through the orchestration layer live. If the scope expands into production ML or pipeline work, Eduba's NLP Logix partnership covers that slice. The first meeting costs nothing and produces a written read either way.
+      </p>
+    </div>
+
+    <aside class="cta-card" aria-label="Schedule">
+      <div class="section-label">Schedule</div>
+      <h3>Matt Creamer</h3>
+      <div class="title">CRO, Eduba</div>
+      <a class="cta-button" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">Book 30 minutes with Matt</a>
+      <span class="email">
+        Or reply direct: <a href="mailto:thecro@eduba.io">thecro@eduba.io</a>
+      </span>
+    </aside>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <p>Prepared for the City of Coral Gables, Innovation and Technology Department.</p>
+      <p class="muted">A read on the stack, based on public record. Not a solicitation. Replaces no procurement vehicle.</p>
+    </div>
+    <div class="footer-right">
+      Prepared by Eduba &middot; <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

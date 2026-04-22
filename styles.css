@@ -1,0 +1,627 @@
+/* City of Coral Gables — prepared read
+   Civic institutional, measured, whitespace-led.
+   Tokens sourced from brand-pack.json (live Drupal theme CSS).
+*/
+
+:root {
+  --cg-green: #187342;
+  --cg-green-dark: #0f5631;
+  --cg-brown: #934312;
+  --cg-accent: #c05818;
+  --cg-text: #413E3A;
+  --cg-heading: #0b0c0c;
+  --cg-rule: #d8d6d2;
+  --cg-rule-soft: #ece9e4;
+  --cg-surface: #f3f2f2;
+  --cg-ivory: #faf8f4;
+  --cg-bg: #ffffff;
+
+  --font-serif: "Lora", Georgia, "Times New Roman", serif;
+  --font-sans: "Open Sans", Helvetica, Arial, sans-serif;
+
+  --container: 1120px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  --shadow-subtle: 0 1px 2px rgba(0,0,0,0.08);
+  --shadow-medium: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--cg-text);
+  background: var(--cg-bg);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a {
+  color: var(--cg-green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 140ms ease;
+}
+a:hover { color: var(--cg-green-dark); text-decoration-thickness: 2px; }
+a:focus-visible {
+  outline: 2px solid var(--cg-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--cg-heading);
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+p { margin: 0; }
+
+/* =========================================================
+   Masthead — mirrors municipal site chrome: green band, seal,
+   thin rule. No gradients, no shadows over photos.
+   ========================================================= */
+.masthead {
+  background: var(--cg-green);
+  color: #ffffff;
+  border-bottom: 4px solid var(--cg-green-dark);
+}
+
+.masthead-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.masthead-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.masthead-logo img {
+  width: auto;
+  height: 58px;
+}
+
+.masthead-meta {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  text-align: right;
+}
+
+.masthead-meta strong {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   Prepared-for strap — small-caps civic label line.
+   ========================================================= */
+.strap {
+  background: var(--cg-ivory);
+  border-bottom: 1px solid var(--cg-rule-soft);
+}
+
+.strap-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 14px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cg-brown);
+  font-weight: 600;
+}
+
+.strap-inner span + span { color: var(--cg-text); font-weight: 400; }
+
+/* =========================================================
+   Hero — serif headline, civic register. No hero photo,
+   no card. Whitespace is the design.
+   ========================================================= */
+.hero {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 72px 32px 56px;
+}
+
+.hero-kicker {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cg-green);
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-kicker::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--cg-rule);
+  max-width: 140px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 4.4vw, 50px);
+  line-height: 1.14;
+  max-width: 22ch;
+  color: var(--cg-heading);
+  margin-bottom: 28px;
+}
+
+.hero-lede {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #2d2a26;
+  max-width: 62ch;
+  padding-left: 20px;
+  border-left: 3px solid var(--cg-green);
+}
+
+/* =========================================================
+   Credentials row — three-column civic facts under the hero.
+   ========================================================= */
+.credentials {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px 56px;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--cg-rule);
+  border-bottom: 1px solid var(--cg-rule);
+}
+
+.credential {
+  padding: 24px 28px;
+  border-right: 1px solid var(--cg-rule-soft);
+}
+.credential:last-child { border-right: 0; }
+
+.credential-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cg-brown);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.credential-value {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 1.35;
+  color: var(--cg-heading);
+  font-weight: 700;
+}
+
+/* =========================================================
+   Body — editorial column, long-form civic reading.
+   ========================================================= */
+.body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 32px 56px;
+}
+
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cg-brown);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.body h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.22;
+  margin-bottom: 28px;
+  max-width: 28ch;
+}
+
+.body p {
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 1.72;
+}
+
+.body p:last-of-type { margin-bottom: 0; }
+
+.pull {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--cg-heading);
+  font-style: italic;
+  padding: 28px 32px;
+  margin: 32px 0;
+  background: var(--cg-ivory);
+  border-top: 2px solid var(--cg-green);
+  border-bottom: 1px solid var(--cg-rule-soft);
+}
+
+/* =========================================================
+   Framework callout — the 60/30/10 frame, civic table.
+   ========================================================= */
+.frame {
+  max-width: var(--container);
+  margin: 40px auto;
+  padding: 0 32px;
+}
+
+.frame-inner {
+  border: 1px solid var(--cg-rule);
+  background: var(--cg-bg);
+}
+
+.frame-head {
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--cg-rule);
+  background: var(--cg-ivory);
+}
+
+.frame-head h3 {
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+.frame-head .section-label { margin-bottom: 6px; }
+
+.frame-rows {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+.frame-row {
+  display: contents;
+}
+
+.frame-cell {
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--cg-rule-soft);
+}
+
+.frame-row:last-child .frame-cell { border-bottom: 0; }
+
+.frame-pct {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--cg-green);
+  line-height: 1;
+}
+
+.frame-desc strong {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--cg-heading);
+  display: block;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.frame-desc span {
+  font-size: 15px;
+  color: var(--cg-text);
+  line-height: 1.55;
+}
+
+/* =========================================================
+   Evidence block — case study citations, flat list.
+   ========================================================= */
+.evidence {
+  max-width: var(--container);
+  margin: 56px auto;
+  padding: 0 32px;
+}
+
+.evidence-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  border-bottom: 2px solid var(--cg-green);
+  padding-bottom: 12px;
+  margin-bottom: 28px;
+}
+
+.evidence-head h2 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.evidence-head .section-label { margin: 0; }
+
+.evidence-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.evidence-item {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--cg-rule-soft);
+  padding-right: 32px;
+}
+
+.evidence-item:nth-child(odd) {
+  border-right: 1px solid var(--cg-rule-soft);
+  padding-right: 32px;
+}
+
+.evidence-item:nth-child(even) {
+  padding-left: 32px;
+  padding-right: 0;
+}
+
+.evidence-item h3 {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  color: var(--cg-heading);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.evidence-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--cg-text);
+  margin-bottom: 8px;
+}
+
+.evidence-item p:last-child { margin-bottom: 0; }
+
+.evidence-item a { font-size: 14px; }
+
+/* =========================================================
+   CTA block — civic, measured. Single primary action.
+   ========================================================= */
+.cta {
+  background: var(--cg-green);
+  color: #ffffff;
+  margin-top: 72px;
+  position: relative;
+}
+
+.cta::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: var(--cg-accent);
+}
+
+.cta-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 64px 32px 72px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.cta .section-label {
+  color: rgba(255,255,255,0.78);
+  margin-bottom: 14px;
+}
+
+.cta h2 {
+  color: #ffffff;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.22;
+  margin-bottom: 18px;
+  max-width: 22ch;
+}
+
+.cta p {
+  color: rgba(255,255,255,0.9);
+  font-size: 16px;
+  line-height: 1.65;
+  margin-bottom: 0;
+  max-width: 52ch;
+}
+
+.cta-card {
+  background: #ffffff;
+  color: var(--cg-text);
+  padding: 32px;
+  border-top: 4px solid var(--cg-accent);
+}
+
+.cta-card .section-label { margin-bottom: 10px; }
+
+.cta-card h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--cg-heading);
+  margin-bottom: 4px;
+}
+
+.cta-card .title {
+  font-size: 14px;
+  color: var(--cg-brown);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 22px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--cg-green);
+  color: #ffffff !important;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  min-height: 48px;
+  line-height: 20px;
+  border: 2px solid var(--cg-green);
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.cta-button:hover {
+  background: var(--cg-green-dark);
+  border-color: var(--cg-green-dark);
+  text-decoration: none;
+}
+
+.cta-button:focus-visible {
+  outline: 3px solid var(--cg-accent);
+  outline-offset: 3px;
+}
+
+.cta-card .email {
+  display: block;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--cg-text);
+}
+.cta-card .email a { color: var(--cg-green); }
+
+/* =========================================================
+   Footer — civic, small. Eduba sits here only.
+   ========================================================= */
+.footer {
+  background: var(--cg-ivory);
+  border-top: 1px solid var(--cg-rule);
+  padding: 32px 32px 40px;
+}
+
+.footer-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--cg-text);
+}
+
+.footer-left p { margin-bottom: 4px; }
+.footer-left .muted { color: #7a766f; font-size: 12px; }
+
+.footer-right {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cg-brown);
+  font-weight: 600;
+  text-align: right;
+}
+
+.footer-right a { color: var(--cg-brown); }
+
+/* =========================================================
+   Responsive — mobile-first friendly at 375px
+   ========================================================= */
+@media (max-width: 860px) {
+  .masthead-inner { padding: 16px 20px; }
+  .masthead-logo img { height: 44px; }
+  .masthead-meta { font-size: 11px; max-width: 150px; }
+
+  .strap-inner { padding: 12px 20px; flex-direction: column; align-items: flex-start; gap: 4px; }
+
+  .hero { padding: 44px 20px 36px; }
+  .hero h1 { font-size: 30px; line-height: 1.18; }
+  .hero-lede { font-size: 17px; padding-left: 16px; }
+
+  .credentials { padding: 0 20px 36px; }
+  .credentials-grid { grid-template-columns: 1fr; }
+  .credential { border-right: 0; border-bottom: 1px solid var(--cg-rule-soft); padding: 18px 0; }
+  .credential:last-child { border-bottom: 0; }
+
+  .body { padding: 16px 20px 36px; }
+  .body h2 { font-size: 24px; }
+  .pull { font-size: 18px; padding: 22px 22px; margin: 24px 0; }
+
+  .frame { padding: 0 20px; }
+  .frame-head { padding: 16px 22px; }
+  .frame-rows { grid-template-columns: 72px 1fr; }
+  .frame-cell { padding: 14px 18px; }
+  .frame-pct { font-size: 22px; }
+
+  .evidence { padding: 0 20px; margin: 44px auto; }
+  .evidence-list { grid-template-columns: 1fr; }
+  .evidence-item,
+  .evidence-item:nth-child(odd),
+  .evidence-item:nth-child(even) {
+    padding: 20px 0;
+    border-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cta-inner { grid-template-columns: 1fr; padding: 44px 20px 52px; gap: 28px; }
+  .cta-card { padding: 24px; }
+
+  .footer { padding: 24px 20px 32px; }
+  .footer-inner { flex-direction: column; }
+  .footer-right { text-align: left; }
+}
+
+@media (max-width: 420px) {
+  body { font-size: 16px; }
+  .hero { padding: 36px 18px 28px; }
+  .hero h1 { font-size: 26px; }
+  .hero-kicker { font-size: 11px; }
+  .hero-kicker::after { max-width: 80px; }
+  .body { padding: 12px 18px 28px; }
+  .body p { font-size: 16px; }
+  .frame-rows { grid-template-columns: 60px 1fr; }
+  .frame-pct { font-size: 20px; }
+  .frame-cell { padding: 12px 14px; }
+  .cta-inner { padding: 36px 18px 44px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+@media print {
+  .cta, .footer { background: #ffffff; color: #000; }
+  a { color: #000; }
+}
